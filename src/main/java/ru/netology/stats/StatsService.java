@@ -52,7 +52,7 @@ public class StatsService {
         int count = 0;
 
         for (int item : salesStatistics) {
-            if (salesAverageAmount > item) {
+            if (salesAverageAmount < item) {
                 count++;
                 monthsWithBelowAverageSales = count;
             }
