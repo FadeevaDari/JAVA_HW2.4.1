@@ -49,12 +49,10 @@ public class StatsService {
     public int monthsWithBelowAverageSales(int[] salesStatistics) {
         int salesAverageAmount = averageAmount(salesStatistics);
         int monthsWithBelowAverageSales = 0;
-        int count = 0;
 
         for (int item : salesStatistics) {
             if (salesAverageAmount < item) {
-                count++;
-                monthsWithBelowAverageSales = count;
+                monthsWithBelowAverageSales++;
             }
         }
         return monthsWithBelowAverageSales;
@@ -63,15 +61,13 @@ public class StatsService {
     public int monthsWithAboveAverageSales(int[] salesStatistics) {
         int salesAverageAmount = averageAmount(salesStatistics);
         int monthsWithAboveAverageSales = 0;
-        int count = 0;
 
         for (int item : salesStatistics) {
             if (salesAverageAmount > item) {
-                count++;
-                monthsWithAboveAverageSales = count;
+                monthsWithAboveAverageSales++;
             }
         }
-             return monthsWithAboveAverageSales;
+        return monthsWithAboveAverageSales;
     }
 
 }
